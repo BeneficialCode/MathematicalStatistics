@@ -1,0 +1,7 @@
+X<-c(38.0,38.6,47.0,44.8,45.0,43.8,42.4,40.8)
+A<-gl(2,4,8)
+B<-gl(2,2,8)
+strength<-data.frame(X,A,B)
+strength.aov<-aov(X~A*B,data=strength)
+res<-summary(strength.aov)
+print(res)
